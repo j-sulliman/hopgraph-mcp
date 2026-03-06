@@ -117,9 +117,8 @@ Requires a Professional or Business tier API key — [upgrade at hopgraph.com/bi
 
 | Tier | Verifications | Rate Limit | Price |
 |------|--------------|------------|-------|
-| Free | 5/month | 10 req/min | Free |
-| Professional | Unlimited | 60 req/min | Coming soon |
-| Business | Unlimited | 120 req/min | Coming soon |
+| Free | 50/month | 10 req/min | Free |
+
 
 ## REST API
 
