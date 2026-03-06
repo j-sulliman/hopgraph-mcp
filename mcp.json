@@ -1,0 +1,77 @@
+{
+  "name": "hopgraph",
+  "version": "1.0.0",
+  "description": "Verify Australian and New Zealand businesses against government registers. Surfaces regulatory findings across jurisdictions that no single register search can reveal.",
+  "homepage": "https://hopgraph.com",
+  "documentation": "https://hopgraph.com/docs",
+  "auth": {
+    "type": "bearer",
+    "instructions": "Get a free API key at https://hopgraph.com/signup"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://hopgraph.com/mcp/"
+  },
+  "tools": [
+    {
+      "name": "verify_business",
+      "description": "Verify any Australian or New Zealand business against government registers. Returns registration status, directors, licences, trading names, and a three-tier risk assessment (CLEAR / ADVISORY / FLAGS_FOUND).",
+      "parameters": {
+        "identifier": {
+          "type": "string",
+          "required": true,
+          "description": "ABN, ACN, NZBN, or company name to verify"
+        },
+        "country": {
+          "type": "string",
+          "required": false,
+          "description": "Optional: 'AU' or 'NZ'. Auto-detected from identifier format if omitted.",
+          "enum": ["AU", "NZ"]
+        }
+      }
+    },
+    {
+      "name": "search_business",
+      "description": "Search Australian and New Zealand business entities by name. Covers 2.3 million+ Australian companies, 3.2 million business names, and New Zealand NZBN-registered entities.",
+      "parameters": {
+        "query": {
+          "type": "string",
+          "required": true,
+          "description": "Business name or partial name to search for"
+        },
+        "limit": {
+          "type": "number",
+          "required": false,
+          "description": "Maximum number of results to return (default 20, max 50)"
+        }
+      }
+    },
+    {
+      "name": "get_verification",
+      "description": "Retrieve a previously generated compliance verification record by its unique audit UID.",
+      "parameters": {
+        "verification_uid": {
+          "type": "string",
+          "required": true,
+          "description": "The verification UID (UUID) returned by a previous verify_business call"
+        }
+      }
+    },
+    {
+      "name": "get_verification_history",
+      "description": "Retrieve the verification history for a specific entity. Requires Professional or Business tier.",
+      "parameters": {
+        "identifier": {
+          "type": "string",
+          "required": true,
+          "description": "ABN, ACN, NZBN, or company name used in previous verify_business calls"
+        },
+        "limit": {
+          "type": "number",
+          "required": false,
+          "description": "Maximum number of history records to return (default 20, max 100)"
+        }
+      }
+    }
+  ]
+}
