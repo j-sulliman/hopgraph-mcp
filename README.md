@@ -6,6 +6,8 @@ Returns registration status, directors, licences, trading names, and a three-tie
 
 Each verification produces an immutable compliance record with a unique audit UID.
 
+Compatible with Claude, ChatGPT, Cursor, and any MCP-compatible AI client.
+
 ## Quick Start
 
 ### 1. Get a free API key
