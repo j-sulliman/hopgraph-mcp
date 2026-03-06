@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.j-sulliman/hopgraph",
-  "description": "Verify any Australian or New Zealand business against government registers in under 100ms. Returns registration status, directors, licences, trading names, and a three-tier risk assessment (CLEAR / ADVISORY / FLAGS_FOUND) that surfaces regulatory findings across jurisdictions. Compliance record generated automatically.",
+  "description": "Verify ANZ businesses against government registers. Surfaces cross-jurisdictional findings.",
   "version": "1.0.0",
   "repository": {
     "url": "https://github.com/j-sulliman/hopgraph-mcp",
