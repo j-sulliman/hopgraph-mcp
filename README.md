@@ -8,6 +8,10 @@ Each verification produces an immutable compliance record with a unique audit UI
 
 Compatible with Claude, ChatGPT, Cursor, and any MCP-compatible AI client.
 
+<a href="https://glama.ai/mcp/servers/@j-sulliman/hop-graph-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@j-sulliman/hop-graph-mcp/badge" alt="HopGraph MCP server" />
+</a>
+
 ## Quick Start
 
 ### 1. Get a free API key
